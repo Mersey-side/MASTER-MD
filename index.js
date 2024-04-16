@@ -47,7 +47,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/FLASH-MD-WA-BOT;;;=>/g,"");
+var session = conf.session.replace(/MASTER;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -692,7 +692,7 @@ ${metadata.desc}
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
-            let msg = ` *සමූහයෙන් එක් අයෙකු පිට විය.. 📌 [POWER BY MASTER MIND]*\n`;
+            let msg = ` *සමුහයෙන් එක් අයෙකු පිට විය... 📌 [POWER BY MASTER MIND]*\n`;
 
             let membres = group.participants;
             for (let membre of membres) {
